@@ -1,0 +1,30 @@
+@media (max-width: $screen-md-min) {
+    header {
+        overflow: hidden;
+        position: relative;
+
+        .header-picture {
+            position: absolute;
+            width: 100%;
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }        
+    }
+    
+    .logo {
+            padding: 20px;
+            text-align: center;
+            
+            .logo-md {
+                display: none;
+            }
+
+            .logo-sm {
+                display: inline-block !important;
+                margin-left: 10px;
+            }
+    }
+}

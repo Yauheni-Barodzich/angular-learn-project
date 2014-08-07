@@ -1,0 +1,38 @@
+.infobox-left{
+        margin-top: 83px;
+}
+
+article.detail{
+    padding: 15px;
+    
+    > img {
+        width: auto !important;
+        width: auto;
+        margin: 15px;
+    }    
+}
+
+.wrapper {
+    width: 820px; 
+    margin: auto;
+}
+
+.search {
+    text-align: right;
+}
+ 
+footer{    
+    text-align: center
+}
+
+.article {
+    margin: 10px 0;
+    background-color: $white;
+    padding: 0 10px;
+
+    img {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        margin: 5px 10px 10px 0;
+    }    
+}

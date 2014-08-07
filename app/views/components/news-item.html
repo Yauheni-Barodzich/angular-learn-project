@@ -1,0 +1,9 @@
+<div data-ng-controller="NewsListCtrl">
+    <article ng-repeat="newsItem in newss | filter:query" class="article">
+        <h4><a href="/#{{newsItem.path}}">{{newsItem.title}}</a></h4>
+        <img src="{{newsItem.imagepath}}" alt="">
+        <p>{{newsItem.brief}}</p>
+    </article>
+    <a class="right block-f" href="/#/news-all">All News</a>
+</div>
+

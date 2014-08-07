@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import 'core/bootstrap';
+@import 'core/type';
+
+// components
+@import "news/header/screen";
+@import "news/header/screen-sm";
+
+@import "news/content/screen";
+@import "news/content/screen-md";
+
+@import "news/footer/screen";
+@import "news/footer/screen-sm";
+@import "news/footer/screen-md";

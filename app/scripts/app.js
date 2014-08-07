@@ -1,19 +1,20 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular
-  .module('angularLearnProjectApp', [
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    angular.module('newsFrontendApp', [
+      'trainingnews'
+    ])
+        .config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+              when('/content', {
+                templateUrl: 'views/components/news-item.html',
+              }).
+                when('/news/:newsId', {
+                templateUrl: 'views/components/news-detail.html',
+              }).
+              otherwise({
+                redirectTo: '/content',
+            });
+      }]);
+})();

@@ -22,17 +22,50 @@ article.detail{
 }
  
 footer{    
-    text-align: center
+    text-align: center;
+	color:#fff;
 }
 
 .article {
-    margin: 10px 0;
-    background-color: $white;
-    padding: 0 10px;
+    margin: 10px 0 30px;
+	background-color: white;
+	padding: 0 10px 30px;
+	border-bottom: 1px solid #F0F0F0;
+	width: 49%;
+	display: inline-block;
+	vertical-align:top;
+	
+	h4 a {
+		text-transform: uppercase;
+		font-weight:700;
+	}
 
     img {
         border-radius: 4px;
         -webkit-border-radius: 4px;
         margin: 5px 10px 10px 0;
+		width: 100%;
     }    
+}
+	
+.wrapper.navigation{
+	background-color:#F0F0F0;
+	width: 100%; 
+    margin: inherit;	
+}
+
+nav{
+    width: 820px; 
+    margin: auto;
+	text-align: right;
+	
+	a{
+		display:inline-block;
+		padding:20px;
+		
+		&:hover{
+			background-color: #A3CDF3;
+			text-decoration:none;
+		}
+	}
 }

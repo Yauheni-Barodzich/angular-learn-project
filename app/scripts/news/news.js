@@ -2,11 +2,9 @@
     'use strict';
     
     angular.module('trainingnews', [
-      'ngRoute',
+      'ngRoute',      
       'newsFrontendControllers',
-      'newsFrontendFilters',
-      'newsFrontendServices'
+      'newsFrontendServices',
+      'ngAnimate'
     ]);
 })();
-
-

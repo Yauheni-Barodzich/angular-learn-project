@@ -1,0 +1,20 @@
+<div class="article" ng-repeat="article in artCtrl.articles">
+	<div class="articleImage">
+		<img ng-src="{{article.image}}" alt=""/>
+	</div>
+	<h2 class="articleTitle" ng-bind="article.title"></h2>
+	<div class="articleInfo">
+		<div class="articleDate" ng-bind="article.date | date:'yyyy-MM-dd'">22:58 Jan 01, 2014</div>
+		<a href="#" class="articleAuthor" ng-bind="article.author"></a>
+		<ul class="socialLinks">
+			<li class="facebook"><a href="#" ng-bind="artCtrl.getRandomLike"></a></li>
+			<li class="gplus"><a href="#" ng-bind="artCtrl.getRandomLike"></a></li>
+			<li class="twitter"><a href="#" ng-bind="artCtrl.getRandomLike"></a></li>
+			<li class="vk"><a href="#" ng-bind="artCtrl.getRandomLike"></a></li>
+			<li class="ya"><a href="#" ng-bind="artCtrl.getRandomLike"></a></li>
+		</ul>
+	</div>
+	<div class="articleDescription">
+		<p ng-bind="article.body"></p>
+	</div>
+</div>

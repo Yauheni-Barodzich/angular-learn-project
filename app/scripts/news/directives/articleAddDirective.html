@@ -1,0 +1,17 @@
+<div>
+	<button ng-click="openAddArticleForm()">New Post</button>
+	<div class="articleFormOverlay" ng-class="{'articleFormVisible' : articleFormVisible}">>
+		<div class="popup">
+			<div class="close" ng-click="closeAddArticleForm()">X</div>
+			<br>
+
+			<form name="articleForm"  ng-submit="articleForm.$valid && artCtrl.addArticle()" novalidate>
+				<input type="text" placeholder="title" ng-model="artCtrl.article.title" required>
+				<textarea  placeholder="text" ng-model="artCtrl.article.body" required> </textarea>
+				<input type="text" placeholder="author" ng-model="artCtrl.article.author" required>
+				<input type="text" placeholder="img link" ng-model="artCtrl.article.image">
+				<input type="submit" value="Submit" />
+			</form>
+		</div>
+	</div>
+</div>

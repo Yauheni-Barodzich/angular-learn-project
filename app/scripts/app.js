@@ -1,26 +1,28 @@
 (function () {
     'use strict';
-	
+
     angular.module('newsFrontendApp', [
-		'trainingnews'
+    'trainingnews'
     ])
 	.config(['$routeProvider',
 		function($routeProvider) {
 			$routeProvider.
 			when('/content', {
-				templateUrl: 'views/components/news-item.html',
-				controller: 'NewsListCtrl'
-			}).
-			when('/news-rest', {
-				templateUrl: 'views/components/news-item.html',
-				controller: 'NewsListRestCtrl'
+				templateUrl: 'views/components/news-item.html'
 			}).
 			when('/content/:newsId', {
-				templateUrl: 'views/components/news-detail.html',
-				controller: 'NewsDetailCtrl'
+				templateUrl: 'views/components/news-detail.html'
 			}).
-			otherwise({
-				redirectTo: '/content',
+            when('/posts', {
+                templateUrl: 'views/components/post-list.html',
+                controller: 'PostsListCtrl'
+            })
+            .when('/posts/:_id', {
+                templateUrl: 'views/components/post-detail.html',
+                controller: 'PostPageCtrl'
+            })
+            .otherwise({
+				redirectTo: '/content'
 			});
-	  }]);
+	    }]);
 })();

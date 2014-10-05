@@ -16,17 +16,29 @@ var newsFrontendControllers = angular.module('newsFrontendControllers', []);
 		
 	}]);
 
-	newsFrontendControllers.controller('NewsDetailCtrl', ['$scope', 'News', 'RestNews',
-	  function($scope, News, RestNews) {
+	newsFrontendControllers.controller('NewsDetailCtrl', ['$scope', 'News', 'RnewsFrontendControllers.controller('PostsListCtrl', ['$scope', 'RestNews', '$location', function ($scope, Posts, $location) {
+        $scope.posts = [];
+        Posts.bindPosts($scope.posts);
+        $scope.limitText = 100;
 
-	  	$scope.newsDetail = {};
-	  
-		var newsDetail = News.get({id: '1478905265'});
+        $scope.postClick = function(id) {
+            $location.path('/posts/' + id);
+        };
+    }]);
 
-		$scope.newsDetail.title = 'test';
-		
-		$scope.news = newsDetail;
-		console.log(newsDetail);
-	}]);
+    newsFrontendControllers.controller('PostPageCtrl', ['$scope', '$routeParams', 'RestNews', function ($scope, $routeParams, Posts) {
+        Posts.get({_id: $routeParams._id}).$promise.then(function (_post) {
+            $scope.post = _post;
+        });
+    }]);k = function(id) {
+            $location.path('/posts/' + id);
+        };
+    }]);
+
+    newsFrontendControllers.controller('PostPageCtrl', ['$scope', '$routeParams', 'RestNews', function ($scope, $routeParams, Posts) {
+        Posts.get({_id: $routeParams._id}).$promise.then(function (_post) {
+            $scope.post = _post;
+        });
+    }]);
 
 })();

@@ -4,9 +4,7 @@
     angular.module('trainingnews', [
       'ngRoute',
       'newsFrontendControllers',
-      'newsFrontendFilters',
-      'newsFrontendServices'
+      'newsFrontendServices',
+      'ngAnimate'
     ]);
 })();
-
-

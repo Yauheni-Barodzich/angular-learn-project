@@ -9,12 +9,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Angular-learn-project</title>
+    <title>Blog Angular Project</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- build:css({.tmp,app}) styles/news.css -->
     <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbuild -->
 </head>
 
@@ -28,22 +29,23 @@
 	<div class="wrapper">
             <div class="view-container">
                 <div data-ng-view class="view-frame"></div>
+                <new-post-popup></new-post-popup>
             </div>
 	</div>
+
     </section>
     <div data-ng-include data-src="'views/components/footer.html'" class="footer"></div>
     <!-- build:js scripts/lt-ie9.js -->
     <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <script src="bower_components/respond/dest/respond.min.js"></script>
-    <script src="bower_components/excanvas/excanvas.js"></script>
     <![endif]-->
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbuild -->
@@ -54,9 +56,14 @@
     
     <!-- build:js({.tmp,app}) scripts/news.js -->
     <script src="scripts/news/news.js"></script>
-    <script src="scripts/news/controllers.js"></script>
-    <script src="scripts/news/filters.js"></script>
-    <script src="scripts/news/services.js"></script>
+	<script src="scripts/news/controllers/newsListCtrl.js"></script>
+    <script src="scripts/news/services/services.js"></script>
+    <script src="scripts/news/filters/crop_text.js"></script>
+    <script src="scripts/news/directives/newpostpopup.js"></script>
+    <script src="scripts/news/directives/post.js"></script>
+
+
+
     <!-- endbuild -->
 </body>
 </html>

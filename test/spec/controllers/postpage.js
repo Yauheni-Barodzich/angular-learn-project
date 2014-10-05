@@ -1,17 +1,14 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: PostpageCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('angularLearnProjectApp'));
+  beforeEach(module('newsFrontendApp'));
 
-  var MainCtrl,
+  var PostpageCtrl,
     scope;
-
-  // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    PostpageCtrl = $controller('PostpageCtrl', {
       $scope: scope
     });
   }));

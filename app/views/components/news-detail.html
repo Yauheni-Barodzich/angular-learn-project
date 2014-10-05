@@ -1,8 +1,8 @@
-<div data-ng-controller="NewsDetailCtrl">
-    <article ng-repeat="newsItem in news" class="article detail">
-            <h3>{{newsItem.title}}</h3>
-		<img src="{{newsItem.imagepath}}">
-                <strong>{{newsItem.brief}}</strong><br>
-		<p>{{newsItem.text}}</p>
+<div>
+    <article class="article detail">
+            <h3>{{newsDetail.title}}</h3>
+        	<a href="/#/content/{{newsDetail.id}}"><img src="/{{newsDetail.image}}" alt=""></a>
+			<strong>{{newsDetail.brief}}</strong><br>
+		<p>{{newsDetail.text}}</p>
 	</article>
 </div>
